@@ -3,13 +3,16 @@ package quizEngine.entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Entity
 @Table(name = "quiz_question")
 public class QuizQuestion {
     public static enum Category { ALL, CORE_JAVA, JAVA_IO, SQL, JAVA_DATABASE, SERVLET, JSP, HTML, CSS, SPRING, HIBERNATE, ANDROID };
-    public static enum QuestionType { MULTIPLE_CHOICE, TRUE_FALSE, CODE };
+    public static enum QuestionType { ALL, MULTIPLE_CHOICE, TRUE_FALSE, CODE };
     public static enum Difficulty { ALL, EASY, AVERAGE, DIFFICULT, CRAZY_HARD };
+    public static enum QuizType { REGULAR, FLASH_CARD };
+    public static enum QuizSize { SMALL, MEDIUM, LARGE, ALL };
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

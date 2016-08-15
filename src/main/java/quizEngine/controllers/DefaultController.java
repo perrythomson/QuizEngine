@@ -5,6 +5,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,8 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 public class DefaultController {
 
     @RequestMapping(value="/")
-    public String jspIndex() {
-        return "index";
+    public View jspIndex() {
+        return new RedirectView("/quiz/");
     }
 
     @RequestMapping(value="/login")
