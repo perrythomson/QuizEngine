@@ -21,7 +21,7 @@ QUESTION: <c:out value="${quizQuestion.question}" />
     False: <input type="radio" name="trueFalseAnswer" value="false">
 </c:if>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-<br><br><input type="submit" name="Show Me">
+<br><br><input type="submit" value="Show Me">
 </form>
 </body>
 </html>
