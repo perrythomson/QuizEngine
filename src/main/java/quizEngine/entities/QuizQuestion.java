@@ -38,7 +38,6 @@ public class QuizQuestion {
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -46,7 +45,6 @@ public class QuizQuestion {
     public Category getCategory() {
         return category;
     }
-
     public void setCategory(Category category) {
         this.category = category;
     }
@@ -54,7 +52,6 @@ public class QuizQuestion {
     public QuestionType getQuestionType() {
         return questionType;
     }
-
     public void setQuestionType(QuestionType questionType) {
         this.questionType = questionType;
     }
@@ -62,7 +59,6 @@ public class QuizQuestion {
     public Difficulty getDifficulty() {
         return difficulty;
     }
-
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }
@@ -70,7 +66,6 @@ public class QuizQuestion {
     public String getQuestion() {
         return question;
     }
-
     public void setQuestion(String question) {
         this.question = question;
     }
@@ -78,7 +73,6 @@ public class QuizQuestion {
     public String getCorrectMultipleChoiceAnswer() {
         return correctMultipleChoiceAnswer;
     }
-
     public void setCorrectMultipleChoiceAnswer(String correctMultipleChoiceAnswer) {
         this.correctMultipleChoiceAnswer = correctMultipleChoiceAnswer;
     }
@@ -86,7 +80,6 @@ public class QuizQuestion {
     public String getWrongMultipleChoiceAnswer1() {
         return wrongMultipleChoiceAnswer1;
     }
-
     public void setWrongMultipleChoiceAnswer1(String wrongMultipleChoiceAnswer1) {
         this.wrongMultipleChoiceAnswer1 = wrongMultipleChoiceAnswer1;
     }
@@ -94,7 +87,6 @@ public class QuizQuestion {
     public String getWrongMultipleChoiceAnswer2() {
         return wrongMultipleChoiceAnswer2;
     }
-
     public void setWrongMultipleChoiceAnswer2(String wrongMultipleChoiceAnswer2) {
         this.wrongMultipleChoiceAnswer2 = wrongMultipleChoiceAnswer2;
     }
@@ -102,7 +94,6 @@ public class QuizQuestion {
     public String getWrongMultipleChoiceAnswer3() {
         return wrongMultipleChoiceAnswer3;
     }
-
     public void setWrongMultipleChoiceAnswer3(String wrongMultipleChoiceAnswer3) {
         this.wrongMultipleChoiceAnswer3 = wrongMultipleChoiceAnswer3;
     }
@@ -110,7 +101,6 @@ public class QuizQuestion {
     public boolean isTrueOrFalse() {
         return trueOrFalse;
     }
-
     public void setTrueOrFalse(boolean trueOrFalse) {
         this.trueOrFalse = trueOrFalse;
     }
@@ -118,7 +108,6 @@ public class QuizQuestion {
     public ArrayList<String> getCodeLines() {
         return codeLines;
     }
-
     public void setCodeLines(ArrayList<String> codeLines) {
         this.codeLines = codeLines;
     }

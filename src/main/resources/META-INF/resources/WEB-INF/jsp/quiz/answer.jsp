@@ -24,6 +24,11 @@
     </div>
 </c:if>
 <br><br>
+<c:if test="${not empty tracker}">
+    You have <c:out value="${tracker.correct}" /> correct <br><c:out value="${tracker.incorrect}" /> incorrect.
+</c:if>
+
+<br><br>
 
 QUESTION: <c:out value="${quizQuestion.question}" /><br>
 ANSWER:
@@ -59,7 +64,7 @@ ANSWER:
 <br><br>
 <form action="/quiz/nextQuestion" method="POST">
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-    <input type="submit" value="Next Question" />
+    <input type="submit" value="Next Question" /> | <a href="/">Home</a>
 </form>
 </body>
 </html>

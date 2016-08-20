@@ -22,7 +22,7 @@
 
     <form name="quizStartForm" method="POST" action="/quiz/startQuiz">
         Name: <input type="text" name="name" /><br>
-        Email: <input type="text" name="name" /><br><br>
+        Email: <input type="text" name="email" /><br><br>
         Quiz Category: <select name="category">
             <c:forEach var="category" items="${categories}">
                 <option value="<c:out value="${category}"/>"><c:out value="${category}"/></option>
@@ -47,6 +47,6 @@
         <input type="submit" value="Let the Quiz Begin">
     </form>
     <br><br><br><br>
-    <a href="/admin/">admin</a>
+    <a href="/admin/">admin</a> | <a href="/">Home</a> | <a href="/">Home</a>
 </body>
 </html>

@@ -53,7 +53,7 @@
     </c:forEach>
 </table>
 <br><br>
-<a href="/">HOME</a>
+<a href="/">HOME</a> | <a href="/logout">Log Out</a>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <a href="/admin/addQuestion">Add New Question</a>
 </body>

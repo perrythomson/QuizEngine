@@ -7,19 +7,71 @@
 <body>
 <h1>QUIZ RESULTS</h1>
 
-<c:if test="${not empty correct}">
+<c:if test="${not empty tracker.correct}">
     <div style="color:green;font-weight: bold;">
-        <c:out value="${correct}" />
+        <c:out value="${tracker.correct}" />
     </div>
 </c:if>
-<c:if test="${not empty incorrect}">
+<c:if test="${not empty tracker.incorrect}">
     <div style="color:green;font-weight: bold;">
-        <c:out value="${incorrect}" />
+        <c:out value="${tracker.incorrect}" />
     </div>
 </c:if>
-<br><br>
+<c:if test="${not empty tracker.name}">
+    <div style="color:green;font-weight: bold;">
+        <c:out value="${tracker.name}" />
+    </div>
+</c:if>
+<c:if test="${not empty tracker.email}">
+    <div style="color:green;font-weight: bold;">
+        <c:out value="${tracker.email}" />
+    </div>
+</c:if>
+<c:if test="${not empty tracker.numberOfQuestions}">
+    <div style="color:green;font-weight: bold;">
+        <c:out value="${tracker.numberOfQuestions}" />
+    </div>
+</c:if>
+<c:if test="${not empty tracker.numberOfQuestions}">
+    <div style="color:green;font-weight: bold;">
+        <c:out value="${tracker.correct/tracker.numberOfQuestions}" />
+    </div>
+</c:if>
 
 <br><br>
-<a href="/">Quiz Me Again</a> | <a href="/admin/">admin</a>
+
+<table>
+    <tr>
+        <th> Tester Id </th>
+        <th> | </th>
+        <th> Email </th>
+        <th> | </th>
+        <th> Name </th>
+        <th> | </th>
+        <th> Correct Answers </th>
+        <th> | </th>
+        <th> Incorrect Answers </th>
+        <th> | </th>
+        <th> Number of Questions </th>
+    </tr>
+    <c:forEach var="testResult" items="${testScores}">
+        <tr>
+            <td><c:out value="${testResult.id}" /></td>
+            <th> | </th>
+            <td><c:out value="${testResult.email}" /></td>
+            <th> | </th>
+            <td><c:out value="${testResult.name}" /></td>
+            <th> | </th>
+            <td><c:out value="${testResult.correct}" /></td>
+            <th> | </th>
+            <td><c:out value="${testResult.incorrect}" /></td>
+            <th> | </th>
+            <td><c:out value="${testResult.numberOfQuestions}" /></td>
+        </tr>
+    </c:forEach>
+</table>
+<br><br>
+<br><br>
+<a href="/">Quiz Me Again</a> | <a href="/admin/">admin</a> | <a href="/">Home</a>
 </body>
 </html>
