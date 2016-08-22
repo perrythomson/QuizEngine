@@ -56,6 +56,11 @@
 <a href="/">HOME</a> | <a href="/logout">Log Out</a>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <a href="/admin/addQuestion">Add New Question</a>
+||
+<a href="/restData/getAllQuestions">Bulk Download Questions</a>
+||
+<a href="/admin/uploadQuestions">Bulk Upload Questions</a>
+
 </body>
 </body>
 </html>
