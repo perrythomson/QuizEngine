@@ -2,20 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 
     <title>QUIZ ENGINE</title>
     <link href="/css/indexCSS.css" rel="stylesheet" type="text/css" />
-    <%--<style>--%>
-        <%--body  {--%>
 
-             <%--background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Yellowstone_Elk.jpg");--%>
-             <%--background-repeat: no-repeat;--%>
-             <%--background-attachment: fixed;--%>
-             <%--background-position: center;--%>
-             <%--background-size: 1300px 800px;--%>
-         <%--}--%>
-    <%--</style>--%>
 </head>
 <body>
     <h1>QUIZ ENGINE</h1>
@@ -46,7 +37,7 @@
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
         <input type="submit" value="Let the Quiz Begin">
     </form>
-    <br><br><br><br>
-    <a href="/admin/">admin</a> | <a href="/">Home</a> | <a href="/">Home</a>
+    <br><br><br><br><br><br><br><br>
+    <a href="/admin/">Admin</a> | <a href="/">Home</a> | <a href="/">Stats</a>
 </body>
 </html>

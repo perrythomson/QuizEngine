@@ -1,6 +1,3 @@
-/**
- * Created by perrythomson on 8/22/16.
- */
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -12,8 +9,8 @@
 <%--encoding when you go here its an encoding with bytes 1's and 0's with multipart/form data vs just a form --%>
 <form method="POST" enctype="multipart/form-data" action="/admin/saveUploadedQuestions">
     <table>
-        <tr><
-            td>File to upload:</td>
+        <tr>
+            <td>File to upload:</td>
             <td><input type="file" name="QuizQuestionsFile" /></td>
         </tr>
         <tr>

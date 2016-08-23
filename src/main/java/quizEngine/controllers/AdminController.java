@@ -68,6 +68,20 @@ public class AdminController {
         return "admin/editQuestion";
     }
 
+    @RequestMapping(value="deleteQuestion")
+    public View deleteQuestion(long id) {                       //this method is to delete question
+        QuizQuestion quizQuestion = quizQuestionDAO.findOne(id);
+        quizQuestionDAO.delete(quizQuestion);  //going to the dao, deleting that particular question
+        return new RedirectView("/admin/");
+    }
+
+    @RequestMapping(value="deleteAllQuestions")
+    public View deleteAllQuestions(long id) {                       //this method is to delete question
+        Iterable<QuizQuestion> quizQuestions = quizQuestionDAO.findAll();
+        quizQuestionDAO.delete(quizQuestions);  //going to the dao, deleting that particular question
+        return new RedirectView("/admin/");
+    }
+
     @RequestMapping(value="saveEditedQuestion")
     public View saveEditedQuestion(QuizQuestion quizQuestion) {
         quizQuestionDAO.save(quizQuestion);
@@ -93,10 +107,10 @@ public class AdminController {
         String returnView = "";
         if (!QuizQuestionsFile.isEmpty()) {
             try {//(below) get current file name...get contents
-//                String pathString = /Users/perrythomson/UPLOADS_Quiz_Engine/"+QuizQuestionsFile.getOriginalFilename(); //TODO create string for the try statement
-                Files.write(Paths.get("/Users/perrythomson/UPLOADS_Quiz_Engine/"+QuizQuestionsFile.getOriginalFilename()),QuizQuestionsFile.getBytes());
+                String pathString = "/Users/perrythomson/UPLOADS_Quiz_Engine/"; //TODO create string for the try statement
+                Files.write(Paths.get(pathString+QuizQuestionsFile.getOriginalFilename()),QuizQuestionsFile.getBytes());
                 System.out.println("-------- File Upload Successful");
-                addUploadToDatabase("/Users/perrythomson/UPLOADS_Quiz_Engine/"+QuizQuestionsFile.getOriginalFilename()); //passing the file location which need to be the same as 2 lines above
+                addUploadToDatabase(pathString+QuizQuestionsFile.getOriginalFilename()); //passing the file location which need to be the same as 2 lines above
             } catch (IOException | RuntimeException e) {                    //two exceptions at once J8 short code
                 e.printStackTrace();
             }

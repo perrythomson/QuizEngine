@@ -21,6 +21,8 @@
         <th> Question </th>
         <th> | </th>
         <th> Answer </th>
+        <th> | </th>
+        <th> Delete </th>
     </tr>
     <c:forEach var="quizQuestion" items="${quizQuestions}">
         <tr>
@@ -49,6 +51,8 @@
                     </c:forEach>
                 </c:if>
             </td>
+            <td><a href="/admin/deleteQuestion?id=${quizQuestion.id}">DELETE: <c:out value="${quizQuestion.id}" /></a></td>
+
         </tr>
     </c:forEach>
 </table>
@@ -59,8 +63,9 @@
 ||
 <a href="/restData/getAllQuestions">Bulk Download Questions</a>
 ||
-<a href="/admin/uploadQuestions">Bulk Upload Questions</a>
+<a href="/admin/uploadQuestions" onclick="return confirm('Are you sure?')">Bulk Upload Questions</a>
+||
+<a href="/admin/deleteAllQuestions" onclick="return confirm('Can you handle deleting all of your questions cupcake?')">Delete All Questions</a>
+</body>
 
-</body>
-</body>
 </html>
