@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by perrythomson on 8/20/16.
  */
 @Controller
-@RequestMapping ("/testerLogin")
+@RequestMapping ("/")
 public class TesterController {
     private final TesterDAO testerDAO;
 
