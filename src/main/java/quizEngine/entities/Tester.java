@@ -2,7 +2,9 @@ package quizEngine.entities;
 
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +12,8 @@ import java.util.Set;
 /**
  * Created by perrythomson on 8/20/16.
  */
+@Entity
+@Table(name = "tester")
 public class Tester {
 
     @Id  //creates users with unique id's

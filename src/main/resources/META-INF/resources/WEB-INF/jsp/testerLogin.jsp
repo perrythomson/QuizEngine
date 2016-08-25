@@ -16,6 +16,7 @@
 </c:if>
 
 <form action="<c:url value='/testerLogin'/>" method="POST">
+                                                                                    <%--TODO figure out why file path for testerLogin is wrong--%>
     <input type="text" name="userid" autofocus required/>
     <br>
     <input type="password" name="password" required/>

@@ -10,10 +10,6 @@ import java.util.HashMap;
 
 @Entity
 @Table(name = "track_results")
-/**
- * Created by perrythomson on 8/17/16.
- */
-
 public class Tracker {
 
     private int correct;

@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import quizEngine.entities.Tester;
 import quizEngine.entities.TesterDAO;
 
+
+@Controller
+@RequestMapping("/signUp")
 public class SignUpController {
 
     private final TesterDAO testerDAO;
