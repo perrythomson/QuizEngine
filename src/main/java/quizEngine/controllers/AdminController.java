@@ -76,7 +76,7 @@ public class AdminController {
     }
 
     @RequestMapping(value="deleteAllQuestions")
-    public View deleteAllQuestions(long id) {                       //this method is to delete question
+    public View deleteAllQuestions() {                       //this method is to delete question
         Iterable<QuizQuestion> quizQuestions = quizQuestionDAO.findAll();
         quizQuestionDAO.delete(quizQuestions);  //going to the dao, deleting that particular question
         return new RedirectView("/admin/");

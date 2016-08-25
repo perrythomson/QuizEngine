@@ -16,7 +16,7 @@
 </c:if>
 
 <form action="<c:url value='/testerLogin'/>" method="POST">
-    <input type="text" name="username" autofocus required/>
+    <input type="text" name="userid" autofocus required/>
     <br>
     <input type="password" name="password" required/>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

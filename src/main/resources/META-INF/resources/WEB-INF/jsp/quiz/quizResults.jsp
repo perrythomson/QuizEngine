@@ -8,33 +8,35 @@
 <h1>QUIZ RESULTS</h1>
 
 <c:if test="${not empty tracker.correct}">
-    <div style="color:green;font-weight: bold;">
+    Correct questions: <div style="color:green;font-weight: bold;">
         <c:out value="${tracker.correct}" />
     </div>
 </c:if>
 <c:if test="${not empty tracker.incorrect}">
-    <div style="color:green;font-weight: bold;">
+    Incorrect questions: <div style="color:green;font-weight: bold;">
         <c:out value="${tracker.incorrect}" />
     </div>
 </c:if>
 <c:if test="${not empty tracker.name}">
-    <div style="color:green;font-weight: bold;">
+    Name: <div style="color:green;font-weight: bold;">
         <c:out value="${tracker.name}" />
     </div>
 </c:if>
 <c:if test="${not empty tracker.email}">
-    <div style="color:green;font-weight: bold;">
+    Email: <div style="color:green;font-weight: bold;">
         <c:out value="${tracker.email}" />
     </div>
 </c:if>
 <c:if test="${not empty tracker.numberOfQuestions}">
-    <div style="color:green;font-weight: bold;">
+    Number of Questions: <div style="color:green;font-weight: bold;">
         <c:out value="${tracker.numberOfQuestions}" />
     </div>
 </c:if>
 <c:if test="${not empty tracker.numberOfQuestions}">
-    <div style="color:green;font-weight: bold;">
-        <c:out value="${tracker.correct/tracker.numberOfQuestions}" />
+    Quiz Percentage: <div style="color:green;font-weight: bold;">
+        <c:out value="${tracker.correct/tracker.numberOfQuestions*100}" />
+    <%--<p>Formatted Number (6): <fmt:formatNumber type="percent"--%>
+                                               <%--minFractionDigits="10" value="${balance}" /></p>--%>
     </div>
 </c:if>
 
