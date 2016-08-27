@@ -4,9 +4,15 @@
 <html>
 <head>
     <title>View All Questions</title>
+    <link href="/css/loginCSS.css" rel="stylesheet" type="text/css" />
+    <%--<img src="META-INF/resources/pictures/Yellowstone_Elk.jpg"  alt= "Yellowstone Elk" style="width:128px;height:128px;" />--%>
+    <%--/Users/perrythomson/IdeaProjects/QuizEngine/src/main/resources/META-INF/resources/pictures--%>
+    <%--<img src="resources/pictures/Yellowstone_Elk.jpg" alt= "Yellowstone Elk" style="width:128px;height:128px;" />--%>
 </head>
 <body>
 <h1>View All Questions</h1>
+
+
 <br><br>
 <table>
     <tr>

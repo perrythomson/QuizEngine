@@ -38,12 +38,6 @@ public class QuizController {
         this.trackerDAO = trackerDAO;
     }
 
-    //added mapping for quizResults direct link
-    @RequestMapping(value="quizResults")
-    public String quizResults (ModelMap model) {
-        return "quiz/quizResults";
-    }
-
     @RequestMapping(value="/")
     public String dashboard(ModelMap model) {
         model.addAttribute("categories", QuizQuestion.Category.values());

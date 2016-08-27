@@ -8,7 +8,7 @@ import quizEngine.entities.TesterDAO;
 
 
 @Controller
-@RequestMapping("/signUp")
+@RequestMapping("/")
 public class SignUpController {
 
     private final TesterDAO testerDAO;
