@@ -19,27 +19,27 @@ public class SignUpController {
         this.testerDAO = testerDAO;
     }
 
-    @RequestMapping(value = "/signup")
-    public String signup() {
-        return "signup";
+    @RequestMapping(value = "/signUp")
+    public String signUp() {
+        return "signUp";
     }
 
     @RequestMapping(value = "/register")
-    public String register(String email, String name, String userid, String password, String verifiedPassword) {
+    public String register(String email, String name, String userID, String password, String verifiedPassword) {
         boolean goodToGo = true;
         goodToGo = verifyEmail(email);
         if (goodToGo) {
-            goodToGo = verifyUserId(userid);
+            goodToGo = verifyUserID(userID);
         }
         if (goodToGo) {
             goodToGo = verifyPassword(password, verifiedPassword);
         }
         if (goodToGo) {
-            Tester tester = new Tester(email, name, userid, password);
+            Tester tester = new Tester(email, name, userID, password);
             testerDAO.save(tester);
             return "/quiz/index";
         } else {
-            return "signup";
+            return "signUp";
         }
     }
 
@@ -52,9 +52,9 @@ public class SignUpController {
         return verified;
      }
 
-     private boolean verifyUserId(String userid) {
-         Tester tester = testerDAO.findByUserId(userid); //not sure if this returns a null object or an empty one
-         if(tester != null && tester.getUserID().equals(userid)) {
+     private boolean verifyUserID(String userID) {
+         Tester tester = testerDAO.findByUserID(userID); //not sure if this returns a null object or an empty one
+         if(tester != null && tester.getUserID().equals(userID)) {
             return false;
          } else {
             return true;

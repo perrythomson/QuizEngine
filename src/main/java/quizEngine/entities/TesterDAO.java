@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 public interface TesterDAO extends CrudRepository<Tester, Long> {
 //    TesterDAO findByEmail(String email);
     Tester findByEmail(String email);
-    Tester findByUserId(String email); //used by signup/login jsp
+    Tester findByUserID(String userID); //used by signup/login jsp
 
 
 }

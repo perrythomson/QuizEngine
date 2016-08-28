@@ -1,7 +1,7 @@
 package quizEngine.entities;
 
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -29,18 +29,18 @@ public class Tester {
     private String password;
 
     @NotNull
-    private Set<RoleType> roles = new HashSet<RoleType>();
+    private HashSet<RoleType> roles = new HashSet<RoleType>();
 
     // Public methods
     //    public Tester(String email, String name) { }
     public Tester() { }
 
     //This allows a tester to be an Admin or a User.
-    public Tester(String email, String name, String userId, String password) {  //default constructor that self instantiates
+    public Tester(String email, String name, String userID, String password) {  //default constructor that self instantiates
                                                                                 //only needed if there are no other constructors
         this.email = email;
         this.name = name;
-        this.userID = userId;
+        this.userID = userID;
         this.password = password;
         roles.add(RoleType.USER);
     }
@@ -48,7 +48,7 @@ public class Tester {
     public Set<RoleType> getRoles() {
         return roles;
     }
-    public void setRoles(Set<RoleType> roles) {
+    public void setRoles(HashSet<RoleType> roles) {
         this.roles = roles;
     }
 

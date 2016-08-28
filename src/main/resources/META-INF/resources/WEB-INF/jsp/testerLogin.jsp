@@ -15,9 +15,8 @@
     <br><br><div style="color: green;">You have been logged out.</div><br><br>
 </c:if>
 
-<form action="<c:url value='/testerLogin'/>" method="POST">
-                                                                                    <%--TODO figure out why file path for testerLogin is wrong--%>
-    <input type="text" name="userid" autofocus required/>
+<form action="<c:url value='/testLogin'/>" method="POST"> <%--TODO figure out why file path for testerLogin is wrong--%>
+    <input type="text" name="userID" autofocus required/>
     <br>
     <input type="password" name="password" required/>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

@@ -14,15 +14,19 @@
 
 <form name = "signUpForm" method="POST" action="/register">
 
-    Email:      <input type="text" name="email"     value="<c:out value="${email}">"    /><br/><br/>
-    Name:       <input type="text" name="name"      value="<c:out value="${name}">"     /><br/><br/>
-    User Id:    <input type="text" name="userid"    value="<c:out value="${userid}">"   /><br/><br/>
+    Email:      <input type="text" name="email"   value="${email}">"    /><br/><br/>
+    Name:       <input type="text" name="name"    value="${name}">"     /><br/><br/>
+    User Id:    <input type="text" name="userid"  value='${userid}'>"   /><br/><br/>
+
+    <%--Email:      <input type="text" name="email"     value="<c:out value="${email}">"    /><br/><br/>--%>
+    <%--Name:       <input type="text" name="name"      value="<c:out value="${name}">"     /><br/><br/>--%>
+    <%--User Id:    <input type="text" name="userid"    value="<c:out value="${userid}">"   /><br/><br/>--%>
 
     Password: <input type="password" name="password" required/><br>
     Verify Password: <input type="password" name="verifiedPassword" required /><br>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /><br>
     <input type="submit" value="Sign me up!">
-
+  <%--TODO change redirect to home or to take test--%>
 </form>
 
 

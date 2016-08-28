@@ -3,6 +3,7 @@ package quizEngine.controllers;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,11 +32,11 @@ public class TesterController {
         return "testerLogin";
     }
 
-    @RequestMapping(value = "/testerLogin", method = RequestMethod.POST)
-    public String validateLogin(String userid, String password, HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping(value = "/testLogin", method = RequestMethod.POST)
+    public String validateLogin(String userID, String password, HttpServletRequest request, HttpServletResponse response) {
         String returnPage = "";
-        Tester tester = testerDAO.findByUserId(userid);
-        if (tester == null || tester.getUserID().equals(userid) == false) {//Used "== false" instead of "!" to improve readability.
+        Tester tester = testerDAO.findByUserID(userID);
+        if (tester == null || tester.getUserID().equals(userID) == false) {//Used "== false" instead of "!" to improve readability.
             request.setAttribute("error","invalid user");
             return "testerLogin";
         }
@@ -53,6 +54,12 @@ public class TesterController {
         return "testerLogin";
     }
 
+    @RequestMapping(value="ViewAllTesters")
+    public String viewAllTesters(ModelMap map) {                       //this method is to delete question
+        Iterable<Tester> testers = testerDAO.findAll();  //from view all questions above
+        map.addAttribute("testers", testers);
+        return "viewAllUserProfiles";
+    }
     @RequestMapping(value="/testerLogout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         request.setAttribute("logout","logout");
