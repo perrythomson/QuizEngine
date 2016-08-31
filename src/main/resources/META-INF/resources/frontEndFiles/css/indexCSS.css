@@ -1,0 +1,43 @@
+h1 {border: 2px solid #949599;
+    height: 35px;
+    width: 900px;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightskyblue;
+    color: mediumvioletred;
+    font-family: "Times New Roman";
+    text-decoration: none;
+}
+
+body  {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Yellowstone_Elk.jpg");
+    /*background-image: url("/resources/frontEndFiles/css/pictures/Yellowstone_Elk.jpg");*/
+    /*background-image: url("/META-INF/resources/frontEndFiles/pictures/Yellowstone_Elk.jpg");*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+form {
+    font-family: "Times New Roman";
+    background-color: lightskyblue;
+    border: 2px solid #949599;
+    height: auto;
+    width: 135px;
+    margin: 2px;
+    padding: 5px;
+}
+
+a {
+    position: relative;
+    background-color: lightskyblue;
+    bottom: 5px;
+    left: 5px;
+    margin: 5px;
+}
+
+p
+{
+    font-family:"Times New Roman";
+    font-size:20px;
+}
