@@ -189,7 +189,7 @@
 //        return i;
 //    }
 //
-//    private static int randomInt(int min, int max) {
+//    private anything int randomInt(int min, int max) {
 //        Random random = new Random();
 //        int randomNumber = random.nextInt((max - min) +1) +min;
 //        return randomNumber;

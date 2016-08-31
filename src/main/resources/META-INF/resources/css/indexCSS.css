@@ -10,8 +10,8 @@ h1 {border: 2px solid #949599;
 }
 
 body  {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Yellowstone_Elk.jpg");
-    /*background-image: url("/css/pictures/Yellowstone_Elk.jpg");*/
+    /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Yellowstone_Elk.jpg");*/
+    background-image: url("/pictures/Yellowstone_Elk.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;

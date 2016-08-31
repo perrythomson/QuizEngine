@@ -33,6 +33,8 @@ public class QuizQuestion {
     private String wrongMultipleChoiceAnswer2;
     private String wrongMultipleChoiceAnswer3;
     private boolean trueOrFalse;
+
+    @Column(columnDefinition = "Blob")
     private ArrayList<String> codeLines;
 
     public long getId() {
