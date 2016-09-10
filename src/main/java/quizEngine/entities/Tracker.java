@@ -27,7 +27,6 @@ public class Tracker {
     @NotNull
     private String name;
 
-
     // Public methods
     public Tracker() { }
 
